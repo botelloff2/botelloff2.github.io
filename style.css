@@ -195,36 +195,7 @@ body {
 .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 .test{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:10px}
 
-/* ================== FORMULARIO ================== */
-.formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 600px;
-  margin: auto;
-}
-.formulario label {
-  font-weight: 600;
-  color: var(--blanco);
-}
-.formulario input,
-.formulario textarea {
-  background: var(--glass);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--blanco);
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 15px;
-  outline: none;
-}
-.formulario input:focus,
-.formulario textarea:focus {
-  border-color: var(--fucsia);
-  box-shadow: 0 0 8px rgba(255, 0, 138, 0.3);
-}
-.formulario button {
-  align-self: center;
-}
+
 
 /* ================== BOTONES ================== */
 .btn {
@@ -246,7 +217,36 @@ body {
 
 /* ================== FOOTER ================== */
 .footer {
+  displa/* ============================
+   FORMULARIO VERTICAL
+   ============================ */
+.form-vertical {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.form-vertical label {
+  font-weight: 600;
+  color: var(--morado);
+}
+
+.form-vertical input,
+.form-vertical textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 15px;
+  resize: none;
+}
+
+.form-vertical input:focus,
+.form-vertical textarea:focus {
+  outline: 2px solid var(--fucsia);
+}y: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
