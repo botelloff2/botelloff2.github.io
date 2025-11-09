@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebCam — Contáctanos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <a href="index.html" class="brand-link" aria-label="Ir a inicio">
+      <div class="brand">
+        <img src="img/logo.jpg" alt="WebCam" class="logo">
+        <div class="brand-text">
+          <h1>WebCam</h1>
+          <small>Estudio · Streaming · Profesional</small>
+        </div>
+      </div>
+    </a>
+
+    <button class="menu-btn" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="quienes.html">Quiénes somos</a></li>
+        <li><a href="contacto.html" class="active">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO / BANNER ========== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes un proyecto en mente o deseas unirte a nuestro equipo? Escríbenos, te responderemos pronto.</p>
+    </div>
+    <div class="hero-decor" aria-hidden="true"></div>
+  </section>
+
+  <!-- ========== FORMULARIO DE CONTACTO ========== -->
+  <!--
+    El formulario es completamente vertical y centrado.
+    Los campos usan estilos definidos en style.css (bordes, padding, focus).
+  -->
+  <section class="seccion contacto">
+    <h3 class="kicker">Envíanos tu mensaje</h3>
+    <form class="formulario" action="#" method="post">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+
+      <label for="asunto">Asunto</label>
+      <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje..." required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="footer">
+    <div class="footer-left">
+      <strong>WebCam</strong> • Calle Ficticia 123 • contacto@webcam.com
+    </div>
+    <div class="footer-right">
+      <small>© 2025 WebCam — Demo</small>
+    </div>
+  </footer>
+
+  <!-- ========== BOTÓN FLOTANTE DE WHATSAPP ========== -->
+  <a class="whatsapp" href="https://wa.me/573001234567" target="_blank" aria-label="WhatsApp">📱</a>
+
+  <!-- ========== SCRIPT DEL MENÚ ========== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.nav');
+
+      if (menuBtn && nav) {
+        menuBtn.addEventListener('click', () => {
+          nav.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => nav.classList.remove('active'));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
