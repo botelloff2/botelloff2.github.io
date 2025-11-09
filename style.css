@@ -117,11 +117,13 @@ body {
   text-shadow: 0 0 15px rgba(255, 0, 138, 0.4);
 }
 .hero p {
-  color: rgba(245, 245, 245, 0.85);
-  font-size: 16px;
-  max-width: 760px;
-  margin: auto;
+    color: rgba(245, 245, 245, 0.88);
+    font-size: 16px;
+    max-width: 760px;
+    /* CAMBIO CLAVE: Cero arriba, auto a los lados, 25px abajo */
+    margin: 0 auto 25px; 
 }
+
 
 /* Efecto de ola animada */
 .hero::after {
