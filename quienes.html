@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebCam — Quiénes Somos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <a href="index.html" class="brand-link" aria-label="Ir a inicio">
+      <div class="brand">
+        <img src="img/logo.jpg" alt="WebCam" class="logo">
+        <div class="brand-text">
+          <h1>WebCam</h1>
+          <small>Estudio · Streaming · Profesional</small>
+        </div>
+      </div>
+    </a>
+
+    <button class="menu-btn" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="quienes.html" class="active">Quiénes somos</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO / BANNER ========== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Quiénes Somos</h2>
+      <p>Somos una agencia digital especializada en la creación de espacios web modernos, seguros y con identidad. Transformamos tu presencia online con innovación y confianza.</p>
+    </div>
+    <div class="hero-decor" aria-hidden="true"></div>
+  </section>
+
+  <!-- ========== CONTENIDO PRINCIPAL ========== -->
+  <section class="seccion quienes">
+    <!-- Misión -->
+    <div class="bloque">
+      <h3>🌟 Nuestra Misión</h3>
+      <p>Brindar soluciones digitales completas para modelos y estudios, con tecnología confiable, diseño moderno y una atención cercana que impulsa el éxito de cada proyecto.</p>
+    </div>
+
+    <!-- Visión -->
+    <div class="bloque">
+      <h3>🚀 Nuestra Visión</h3>
+      <p>Ser líderes en desarrollo y producción digital para creadores de contenido, destacando por nuestra innovación, calidad y compromiso ético.</p>
+    </div>
+
+    <!-- Valores -->
+    <div class="bloque">
+      <h3>💎 Nuestros Valores</h3>
+      <ul>
+        <li>Profesionalismo y discreción en cada trabajo.</li>
+        <li>Transparencia y comunicación abierta.</li>
+        <li>Pasión por la creatividad y la excelencia visual.</li>
+        <li>Compromiso con la privacidad y seguridad digital.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="footer">
+    <div class="footer-left">
+      <strong>WebCam</strong> • Calle Ficticia 123 • contacto@webcam.com
+    </div>
+    <div class="footer-right">
+      <small>© 2025 WebCam — Demo</small>
+    </div>
+  </footer>
+
+  <!-- ========== BOTÓN FLOTANTE DE WHATSAPP ========== -->
+  <a class="whatsapp" href="https://wa.me/573001234567" target="_blank" aria-label="WhatsApp">📱</a>
+
+  <!-- ========== SCRIPT DEL MENÚ ========== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.nav');
+
+      if (menuBtn && nav) {
+        menuBtn.addEventListener('click', () => {
+          nav.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => nav.classList.remove('active'));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
