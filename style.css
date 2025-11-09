@@ -95,6 +95,38 @@ body {
 }
 
 /* ================== HERO / BANNER ================== */
+
+/* --- HERO CTAS (Botones) --- */
+.hero-ctas {
+  /* Separación superior de los botones del texto del párrafo */
+  margin-top: 25px; 
+  display: flex;
+  gap: 16px; /* Espacio entre el botón "Trabaja con nosotros" y "Ver servicios" */
+  justify-content: center; /* Centra los botones horizontalmente */
+  flex-wrap: wrap; /* Permite que los botones salten de línea en móvil */
+}
+
+/* --- HERO SOCIALS (Iconos) --- */
+.hero-socials {
+  /* CLAVE: Espacio para separar los iconos de los botones (hero-ctas) */
+  margin-top: 25px; 
+  display: flex;
+  gap: 10px; /* Espacio entre los iconos */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  align-items: center;
+}
+
+/* --- Estilo de los iconos individuales (para que se vean bien en el fondo oscuro) --- */
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--glass); /* Usa tu variable de color para un efecto semi-transparente */
+}
+
+
 .hero {
   position: relative;
   padding: 100px 20px;
