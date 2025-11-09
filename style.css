@@ -172,18 +172,28 @@ body {
 }
 
 /* ================== SECCIONES GENERALES ================== */
-.seccion {
-  max-width: 980px;
-  margin: 40px auto;
-  padding: 28px 18px;
-  border-radius: 10px;
-  background: transparent;
-}
-.kicker {
-  color: var(--fucsia);
-  font-weight: 700;
-  margin-bottom: 12px;
-}
+/* Secciones */
+.seccion{max-width:980px;margin:36px auto;padding:28px 18px;background:transparent;border-radius:10px}
+.kicker{color:var(--fucsia);font-weight:700;margin-bottom:12px}
+
+/* FEATURES (cards) */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;backdrop-filter:blur(4px)}
+.card-icon{width:36px;height:36px}
+.card h4{margin:12px 0 6px;color:var(--morado)}
+.card p{margin:0;color:rgba(245,245,245,0.8);font-size:14px}
+
+/* GRID servicios */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.service{padding:18px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);}
+
+/* GALERIA */
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.galeria img{width:100%;height:180px;object-fit:cover;border-radius:10px;border:3px solid rgba(255,0,138,0.07)}
+
+/* TESTIMONIOS */
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.test{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:10px}
 
 /* ================== FORMULARIO ================== */
 .formulario {
