@@ -33,39 +33,33 @@
     </nav>
   </header>
 
-  <!-- ========== HERO / BANNER ========== -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h2>Contáctanos</h2>
-      <p>¿Tienes un proyecto en mente o deseas unirte a nuestro equipo? Escríbenos, te responderemos pronto.</p>
-    </div>
-    <div class="hero-decor" aria-hidden="true"></div>
-  </section>
+  <!-- FORMULARIO -->
+<section class="seccion fade-up">
+  <h3 class="kicker">Formulario de contacto</h3>
+  <p>Completa los campos y te responderemos lo antes posible.</p>
 
-  <!-- ========== FORMULARIO DE CONTACTO ========== -->
-  <!--
-    El formulario es completamente vertical y centrado.
-    Los campos usan estilos definidos en style.css (bordes, padding, focus).
-  -->
-  <section class="seccion contacto">
-    <h3 class="kicker">Envíanos tu mensaje</h3>
-    <form class="formulario" action="#" method="post">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+  <form class="form-vertical" onsubmit="alert('Demo: el formulario aún no está conectado.'); return false;">
+    <label>Nombre completo</label>
+    <input type="text" required placeholder="Tu nombre completo" />
 
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+    <label>Correo electrónico</label>
+    <input type="email" required placeholder="tu@correo.com" />
 
-      <label for="asunto">Asunto</label>
-      <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje..." required>
+    <label>Teléfono</label>
+    <input type="tel" required placeholder="+57 300 000 0000" />
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <label>Ciudad y país</label>
+    <input type="text" required placeholder="Ej: Bogotá, Colombia" />
 
-      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-    </form>
-  </section>
+    <label>Edad</label>
+    <input type="number" min="18" required placeholder="18" />
 
+    <label>Mensaje</label>
+    <textarea required placeholder="Cuéntanos un poco sobre ti o tu proyecto"></textarea>
+
+    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+  </form>
+</section>
   <!-- ========== PIE DE PÁGINA ========== -->
   <footer class="footer">
     <div class="footer-left">
