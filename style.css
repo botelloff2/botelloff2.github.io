@@ -1,0 +1,298 @@
+/* ======================================================
+   WebCam — Estilo Premium (Fucsia + Violeta + Negro)
+   Incluye: Header, Banner con ola + brillo diagonal,
+   Formularios, Cards, Footer, y botón flotante WhatsApp
+   ====================================================== */
+
+/* ================== VARIABLES DE COLOR ================== */
+:root {
+  --fucsia: #ff008a;
+  --violeta: #8a2be2;
+  --negro: #000;
+  --gris: #111;
+  --blanco: #f5f5f5;
+  --glass: rgba(255, 255, 255, 0.05);
+}
+
+/* ================== ESTILOS BASE ================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(180deg, #020202, #070707);
+  color: var(--blanco);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================== HEADER ================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 0, 138, 0.08);
+}
+
+/* Marca (logo + texto) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  height: 54px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.brand-text h1 {
+  font-size: 18px;
+  color: var(--fucsia);
+  margin: 0;
+}
+.brand-text small {
+  font-size: 12px;
+  color: rgba(245, 245, 245, 0.65);
+}
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================== NAVEGACIÓN ================== */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--fucsia);
+  cursor: pointer;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.nav a:hover,
+.nav a.active {
+  background: linear-gradient(90deg, var(--fucsia), var(--violeta));
+  color: #fff;
+}
+
+/* ================== HERO / BANNER ================== */
+.hero {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 0, 138, 0.08), rgba(138, 43, 226, 0.08));
+}
+
+/* Texto central del banner */
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+.hero h2 {
+  font-size: 36px;
+  color: var(--fucsia);
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(255, 0, 138, 0.4);
+}
+.hero p {
+  color: rgba(245, 245, 245, 0.85);
+  font-size: 16px;
+  max-width: 760px;
+  margin: auto;
+}
+
+/* Efecto de ola animada */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 30% 50%,
+      rgba(255, 0, 138, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(circle at 70% 60%, rgba(138, 43, 226, 0.12), transparent 40%);
+  animation: wave 8s infinite linear;
+  transform: translateX(-25%);
+  filter: blur(30px);
+  opacity: 0.7;
+}
+
+/* Brillo diagonal */
+.hero-decor {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 40%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  animation: shine 12s infinite linear;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+@keyframes wave {
+  0% { transform: translateX(-25%) rotate(0deg); }
+  100% { transform: translateX(0%) rotate(360deg); }
+}
+@keyframes shine {
+  0% { transform: rotate(0deg); opacity: 0.4; }
+  100% { transform: rotate(360deg); opacity: 0.4; }
+}
+
+/* ================== SECCIONES GENERALES ================== */
+.seccion {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 28px 18px;
+  border-radius: 10px;
+  background: transparent;
+}
+.kicker {
+  color: var(--fucsia);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ================== FORMULARIO ================== */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin: auto;
+}
+.formulario label {
+  font-weight: 600;
+  color: var(--blanco);
+}
+.formulario input,
+.formulario textarea {
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: var(--fucsia);
+  box-shadow: 0 0 8px rgba(255, 0, 138, 0.3);
+}
+.formulario button {
+  align-self: center;
+}
+
+/* ================== BOTONES ================== */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, var(--fucsia), var(--violeta));
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(138, 43, 226, 0.2);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* ================== FOOTER ================== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  max-width: 980px;
+  margin: 30px auto;
+  border-top: 1px solid rgba(255, 0, 138, 0.05);
+  color: rgba(245, 245, 245, 0.7);
+  font-size: 14px;
+}
+.footer-left {
+  font-weight: 600;
+}
+.footer-right small {
+  color: rgba(245, 245, 245, 0.6);
+}
+
+/* ================== BOTÓN WHATSAPP ================== */
+.whatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: linear-gradient(90deg, var(--fucsia), var(--violeta));
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+  z-index: 1000;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 900px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 8px;
+    background: #070707;
+    padding: 12px;
+    border-radius: 8px;
+    position: absolute;
+    right: 10px;
+    top: 68px;
+    display: none;
+  }
+  .nav.active ul {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .hero h2 {
+    font-size: 28px;
+  }
+  .logo {
+    height: 48px;
+  }
+}
